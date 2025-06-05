@@ -3,10 +3,11 @@ title: Team
 layout: teams
 description: Team
 permalink: "/team/"
-intro_image_absolute: true
-intro_image_hide_on_mobile: false
+intro_image: "images/people.jpg"
+intro_image_absolute: false
+intro_image_hide_on_mobile: true
 ---
 
-# Meet The Team
+# Who We Are
 
-Our team of qualified accountants and financial consultants can help your business at any stage of it's growth.
+We are an interdisciplinary team dedicated to bridging design and accessibility to improve access to computer-mediated communication.

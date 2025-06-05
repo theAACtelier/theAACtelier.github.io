@@ -1,27 +1,27 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "Agency",
+    "description": "We value diverse perspectives across disciplines, backgrounds and cultures. We amplify and center the voices of those working to improve access to information and communication for all.",
     "image": {
-      "url": "images/features/noun_branding_1885335.svg",
+      "url": "images/features/agency.png",
       "width": 80,
       "height": 80
     }
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Accessibility",
+    "description": "We believe that accessibility benefits everyone. We prioritize equitable participation and access to communication.",
     "image": {
-      "url": "images/features/noun_The Process_1885341.svg",
+      "url": "images/features/accessibility.png",
       "width": 80,
       "height": 80
     }
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Collaboration",
+    "description": "We foster collaboration and knowledge-sharing to enrich our understanding and the development of impactful solutions. We prototype and build with communities, designing with affordability, access and context in mind.",
     "image": {
-      "url": "images/features/noun_3d modeling_1885342.svg",
+      "url": "images/features/collaboration.png",
       "width": 80,
       "height": 80
     }
