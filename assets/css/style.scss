@@ -2,13 +2,14 @@
 ---
 
 // Colors
-$primary: #095D8B;
-$primary-dark: #194f6c;
-$secondary: #3c92c1;
-$black: #2f2f41;
+$primary: #778873;
+$primary-dark: #5c6b59;
+$secondary: #778873;
+$black: #30343F;
 $white: #ffffff;
-$white-offset: #f1f8fc;
+$white-offset: #FDF6ED;
 $steel: #5c5a5a;
+$page-bg: #F8F4EE;
 
 // Links
 $link-color: $primary;
@@ -17,8 +18,8 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: "Playfair Display", serif, -apple-system;
+$font-family-base: "Inter", Helvetica, Arial, sans-serif;
+$font-family-heading: "Poppins", sans-serif;
 
 // Footer
 $footer-background-color: $primary;
@@ -106,13 +107,17 @@ $sub-footer-text-color: $white;
 @import "pages/page-home";
 @import "pages/page-teams";
 @import "pages/page-service";
+@import "pages/page-publications";
 
 body {
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   font-family: $font-family-base;
+  background-color: $page-bg;
   @include media-breakpoint-up(md) {
-    font-size: 16px;
-    line-height: 1.3;
+    font-size: 15px;
+    line-height: 1.65;
   }
 }

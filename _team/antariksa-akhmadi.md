@@ -2,9 +2,9 @@
 title: "Antariksa Akhmadi"
 date: 2018-11-19T10:47:58+10:00
 image: "images/team/antariksa-akhmadi.jpg"
-jobtitle: "Master's Student"
-linkedinurl: false
-promoted: true
+section: "alumni"
+jobtitle: "Master's Student in MLIS"
+url_custom: false
 weight: 6
 ---
 

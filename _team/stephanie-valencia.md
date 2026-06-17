@@ -3,7 +3,7 @@ title: "Stephanie Valencia², PhD"
 date: 2018-11-19T10:47:58+10:00
 image: "images/team/stephanie-valencia.jpg"
 jobtitle: "Assistant Professor"
-linkedinurl: false
+section: "lab"
 promoted: true
 weight: 1
 ---

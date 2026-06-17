@@ -1,0 +1,20 @@
+<div class="team team-summary team-summary-large">
+  {% if include.team.image %}
+  <div class="team-image">
+    <img width="115" height="115" alt="{{ include.team.title }}" class="img-fluid mb-2" src="{{ include.team.image | relative_url }}" />
+  </div>
+  {% endif %}
+  <div class="team-meta">
+    <h2 class="team-name">
+      {% if include.team.url_custom %}
+        <a href="{{ include.team.url_custom }}" target="_blank" rel="noreferrer">{{ include.team.title }}</a>
+      {% else %}
+        {{ include.team.title }}
+      {% endif %}
+    </h2>
+    <p class="team-description">{{ include.team.jobtitle }}</p>
+    {% if include.team.interests %}
+    <p class="team-interests"><span class="interests-label">interests:</span> {{ include.team.interests }}</p>
+    {% endif %}
+  </div>
+</div>

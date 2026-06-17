@@ -1,9 +1,9 @@
 .strip {
-  background: white;
+  background: $page-bg;
   background-repeat: no-repeat;
 }
 .strip-white {
-  background-color: white;
+  background-color: $page-bg;
 }
 .strip-grey {
   background-color: $white-offset;

@@ -3,7 +3,7 @@ title: "Jong Ho Lee"
 date: 2018-11-19T10:47:58+10:00
 image: "images/team/jong-ho-lee.png"
 jobtitle: "PhD Student"
-linkedinurl: false
+section: "lab"
 promoted: true
 weight: 2
 ---

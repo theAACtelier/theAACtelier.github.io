@@ -3,7 +3,7 @@ title: "Ruotong Gao"
 date: 2018-11-19T10:47:58+10:00
 image: "images/team/ruotong-gao.jpg"
 jobtitle: "PhD Student"
-linkedinurl: false
+section: "lab"
 promoted: true
 weight: 3
 ---
