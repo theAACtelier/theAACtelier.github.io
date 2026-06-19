@@ -28,6 +28,21 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: $primary;
+    margin-right: 8px;
+  }
+
+  .publication-award {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: $font-family-base;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a6200;
+    background-color: #fff3cd;
+    border-radius: 3px;
+    padding: 1px 7px;
+    vertical-align: middle;
   }
 
   .publication-title {
@@ -35,8 +50,17 @@
     font-weight: 600;
     font-family: $font-family-heading;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: $black;
+  }
+
+  .publication-authors {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: $font-family-base;
+    color: $steel;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
   .publication-links {

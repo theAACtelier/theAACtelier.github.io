@@ -4,7 +4,7 @@ date: 2018-11-19T10:47:58+10:00
 image: "images/team/ruotong-gao.jpg"
 jobtitle: "PhD Student"
 section: "lab"
-promoted: true
+interests: "Assistive Technology, Collaboration, AAC"
 weight: 3
 ---
 

@@ -14,7 +14,7 @@ bodyClass: "page-publications"
 </div>
 
 <div class="container pt-4 pb-6">
-  {% assign publications = site.publications | sort: "weight" %}
+  {% assign publications = site.publications | sort: "date" | reverse %}
   {% for pub in publications %}
   <div class="publication-item">
     <div class="row align-items-start">
@@ -30,12 +30,14 @@ bodyClass: "page-publications"
       {% endif %}
         <div class="publication-meta">
           {% if pub.venue %}<span class="publication-venue">{{ pub.venue }}</span>{% endif %}
+          {% if pub.award %}<span class="publication-award">{{ pub.award }}</span>{% endif %}
         </div>
         <h2 class="publication-title">{{ pub.title }}</h2>
+        {% if pub.authors %}<p class="publication-authors">{{ pub.authors }}</p>{% endif %}
         <div class="publication-links">
           {% if pub.pdf %}<a href="{{ pub.pdf }}" class="pub-link" target="_blank" rel="noreferrer">PDF</a>{% endif %}
           {% if pub.video %}<a href="{{ pub.video }}" class="pub-link" target="_blank" rel="noreferrer">Video</a>{% endif %}
-          {% if pub.url_more %}<a href="{{ pub.url_more }}" class="pub-link" target="_blank" rel="noreferrer">Code</a>{% endif %}
+          {% if pub.code %}<a href="{{ pub.code }}" class="pub-link" target="_blank" rel="noreferrer">Code</a>{% endif %}
         </div>
       </div>
     </div>
