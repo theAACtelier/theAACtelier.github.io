@@ -1,6 +1,6 @@
 ---
 title: Research
-layout: services
+layout: research
 description: Research
 intro_image: false
 intro_image_absolute: true

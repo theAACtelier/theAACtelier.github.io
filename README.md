@@ -1,56 +1,24 @@
-# Jekyll Serif Theme
+# theAACtelier Lab Website
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical brochure/marketing website. The theme is fully responsive, blazing fast and artfully illustrated.
+Source for the [AACtelier Lab](https://theaactelier.github.io) website, built with Jekyll and deployed via GitHub Pages.
 
-[Live Demo](https://jekyll-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io)
+## Local Development
 
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+**Prerequisites:** Ruby and Jekyll. If this is your first time, follow the [Jekyll installation docs](https://jekyllrb.com/docs/installation/) to set up your environment.
 
-![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
-
-### Theme features
-
-- Jekyll 4.2+
-- Netlify & Github Pages ready
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- 100% Responsive design, animated hamburger and mobile slide in menu
-- Bootstrap 4.6 - _Only the bootstrap grid and utilites are imported by default. If you want to use more of the Boostrap library you can uncomment the `@import` in `style.scss`_
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
-
-## Installation
-
-### Installing Ruby & Jekyll
-
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
-
-### Installing Theme
-
-Download or clone the theme.
-
-To run the theme locally, navigate to the theme directory and run:
+Install dependencies:
 
 ```
 bundle install
 ```
 
-To start the Jekyll local development server.
+Start the local dev server (available at `http://localhost:4000`):
 
 ```
 bundle exec jekyll serve
 ```
 
-To build the theme.
+Build the site (output goes to `_site/`):
 
 ```
 bundle exec jekyll build
@@ -58,46 +26,69 @@ bundle exec jekyll build
 
 ## Deployment
 
-### Netlify
+The site deploys to GitHub Pages via the workflow in [.github/workflows/deploy.yml](.github/workflows/deploy.yml). Trigger it manually from the **Actions** tab in GitHub — it builds the site and pushes the output to the `gh-pages` branch.
 
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
+The `baseurl` in [_config.yml](_config.yml) is set to `/` — keep this if the site lives at the root of the domain.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
+## Project Structure
 
-### Github Pages
+### Pages
 
-This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
+Top-level `.md` files map to the site's main sections:
 
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme/"`
+| File | URL | Notes |
+|---|---|---|
+| `index.md` | `/` | Home page — intro text lives here |
+| `research.md` | `/research/` | Research section intro text |
+| `publications.md` | `/publications/` | Publications page — entries come from `_publications/` |
+| `team.md` | `/people/` | People page intro text |
+| `join-us.md` | `/join-us/` | Recruiting/contact page |
 
-## Extras
+Navigation links and weights are controlled in [`_data/menus.yml`](_data/menus.yml).
 
-### License
+### Collections
 
-- You cannot create ports of this theme
-- You cannot re-sell this theme
+Content that repeats across multiple entries uses Jekyll collections:
 
-### Credits
+- **`_team/`** — one `.md` file per lab member. Front matter fields: `title`, `jobtitle`, `section`, `interests`, `image`, `weight`.
+- **`_publications/`** — one `.md` file per publication. Front matter fields: `title`, `venue`, `authors`, `date`, `award`, `image`, `pdf`, `video`, `code`.
+- **`_research/`** — research projects shown on the Research page. Front matter fields: `title`, `weight`.
 
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-- Stock images by Unsplash - https://unsplash.com/
-- Feature icons by Noun Project - https://thenounproject.com/
+### Layouts and Includes
 
-## Support My Work
+| Directory | Purpose |
+|---|---|
+| [`_layouts/`](_layouts/) | Page templates (`default`, `home`, `page`, `team`, `teams`, `publications`, `service`, `research`, `contact`) |
+| [`_includes/`](_includes/) | Reusable HTML partials (header, footer, nav, social links, team card, etc.) |
 
-I've been building open source themes for all the main static site generators for over 4 years now. My premium themes allow me to continue to allocate time to maintain, improve and build new open source themes.
+### Data Files
 
-1. Leave a star ⭐🙏🏻
-2. Make a contribution to this theme, add a feature, fix a bug, nothing is to small 
-2. Mention this theme on twitter [@zerostaticio](https://twitter.com/zerostaticio) 📢
-3. Purchase a premium theme 🔥
+Site-wide configuration lives in [`_data/`](_data/):
 
-### All Jekyll Themes by Zerostatic
+| File | Controls |
+|---|---|
+| `menus.yml` | Main nav and footer links |
+| `features.json` | The three lab values shown on the home page (Agency, Accessibility, Collaboration) |
+| `social.json` | Social media links in the footer |
+| `contact.yml` | Contact email and phone (used by the contact layout) |
+| `seo.yml` | SEO metadata |
 
-- [Jekyll Serif (Open Source)](https://www.zerostatic.io/theme/jekyll-serif/)
-- [Jekyll Atlantic (Open Source)](https://www.zerostatic.io/theme/jekyll-atlantic/)
-- [Jekyll Advance (Premium)](https://www.zerostatic.io/theme/jekyll-advance/)
-- [Jekyll Origin (Premium)](https://www.zerostatic.io/theme/jekyll-origin/)
-- [Jekyll Curate (Premium)](https://www.zerostatic.io/theme/jekyll-curate/)
+### Styles
 
-🇦🇺 **Made in Australia** by Robert Austin
+[`assets/css/style.scss`](assets/css/style.scss) is the main stylesheet entry point. Bootstrap SCSS source files are in [`_sass/bootstrap/`](_sass/bootstrap/); custom overrides go in [`_sass/`](_sass/).
+
+### Images
+
+| Path | Contents |
+|---|---|
+| `images/team/` | Headshots for lab members |
+| `images/features/` | Icons for the home page values section |
+| `images/logo/` | Logo variants (desktop and mobile, PNG and SVG) |
+
+## Under Construction
+
+The following parts of the site are actively being developed and may be incomplete or using placeholder content:
+
+- **Home page design** (`index.md`, `_layouts/home.html`) — layout and visual design are not finalized.
+- **Research page design** (`research.md`, `_layouts/research.html`) — the research projects section is being designed; `_research/` entries are stubs.
+- **Publication list** (`_publications/`, `_layouts/publications.html`) — the list format and entries are in progress.
